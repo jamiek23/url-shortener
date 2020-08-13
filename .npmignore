@@ -1,0 +1,5 @@
+.dockerignore
+.env
+.eslintrc*
+docker-compose*
+Dockerfile*
