@@ -14,8 +14,7 @@ For production using Docker Swarm, you use `docker stack deploy`.
 ## Node.js packages
 ### express
 The main meat and gravy of the project. Provides a framework for building 
-web applications, in a more convenient manner than the standard [`http.
-Server`](https://nodejs.org/api/http.html#http_class_http_server) API.
+web applications, in a more convenient manner than the standard [`http.Server`](https://nodejs.org/api/http.html#http_class_http_server) API.
 
 * [Official website](http://expressjs.com/)
 * [NPM module](https://www.npmjs.com/package/express)
