@@ -50,18 +50,20 @@ requests, so this extra package is needed to do this.
 ### nanoid
 Used to generate unique short URLs, which is also used as a database ID. 
 The length is 12 characters, using a 64-character set. (In regex terms: 
-`[A-Za-z0-9\_\-]`)
+`[A-Za-z0-9\_\-]`) It is designed to be a small and cryptographically 
+strong module, so I will likely be reusing this module elsewhere on "real"
+projects.
 
 According to the [Nano ID Collision Calculator](https://zelark.github.io/nano-id-cc/), 
 with a given ID length of 12, there is a 1% probability of a duplicate ID 
-being generated in 1000 years. Were this a real application, some 
-additional checks would probably need to be implemented or the ID length 
-increased.
+being generated in 1000 years assuming a rate of 1000/IDs/hour. Were this 
+a real application, some additional checks would probably need to be 
+implemented or the ID length increased.
 
 * [NPM module](https://www.npmjs.com/package/nanoid)
 
 ### dotenv
-Will load enviroment variables from `.env` file. Very useful when running 
+Will load environment variables from `.env` file. Very useful when running 
 locally without `docker-compose`. (When using `docker-compose`, `.env` is 
 loaded automatically by compose itself.)
 
@@ -69,7 +71,7 @@ loaded automatically by compose itself.)
 
 ## Docker images
 ### Node
-Well if we're running Node.js code, we'll need something to run it on won't we? `12-slim` version of the node image is used, meaning it will have Node.js v12 (LTS release) on a minimal Debian install.
+Well if we're running Node.js code, we'll need something to run it on won't we? `12-slim` version of the `node` image is used, meaning it will have Node.js v12 (LTS release) on a minimal Debian install.
 
 Potentially `12-alpine` could be used, but would likely need an additional 
 build image with compilers included. `12-slim` contains just enough to get 
